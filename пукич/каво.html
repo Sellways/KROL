@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function isNotMax(e){
+                e = e || window.event;
+                var target = e.target || e.srcElement;
+                var code=e.keyCode?e.keyCode:(e.which?e.which:e.charCode)
+            
+                switch (code){
+                    case 13:
+                    case 8:
+                    case 9:
+                    case 46:
+                    case 37:
+                    case 38:
+                    case 39:
+                    case 40:
+                    return true;
+                }
+                return target.value.length <= target.getAttribute('maxlength');
+            }
+        </script>
+        <meta charset="UTF-8">
+        <title>Егор ку</title>
+        <!--width: 250px;
+        height: 250px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 100px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        -->
+        <style>
+            .rew {
+	            position: relative;
+            }
+            .password-control {
+            	position: absolute;
+            	top: 11px;
+            	right: 6px;
+            	display: inline-block;
+            	width: 20px;
+            	height: 20px;
+            	background: url(/view.svg) 0 0 no-repeat;
+            }
+            .password-control.view {
+            	background: url(/no-view.svg) 0 0 no-repeat;
+            }
+            .data, .login, .password{
+                background-color: transparent !important;
+                color: #ebebeb9f;
+            }
+            #kavo::placeholder {
+                color: #ebebeb86;
+            }
+            #password::placeholder {
+                color: #ebebeb86;
+            }
+            #login::placeholder {
+                color: #ebebeb86;
+            }
+            #gera {
+                color: #bbb9b9ce; 
+                width: 250px;
+                height: 250px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                margin-top: 100px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            input {
+                color:#363636;
+                margin: 5px;
+                padding: 5px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                
+            }
+            #login, #password {
+                background-color: #111111;
+                border: none;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                width: 250px;
+
+            }
+            input[type="submit"] {
+                border: none;
+                background: rgb(255, 131, 42);
+                border-radius: 5px;
+                padding: 10px;
+                width: 250px;
+                
+            }
+            #kavo {
+                background-color: #111111;
+                border: none;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                width: 130px;
+                
+            }
+            #ava {
+                margin-left: 435px;
+                margin-top: -56px;
+                margin-bottom: -172px;
+            }
+            #Fam, #Name, #Email, #Tel {
+                font-size: 15px;
+            }
+            ::placeholder {
+                color:#363636f5;
+            }
+        </style>
+    </head>
+    <body bgcolor="#11111">
+        <form>
+                <p id="ava" ><a href="Pazziloy.html"><img  src="а ы2.png" alt="даже картинку спиздили" width="400"></a></p> <!--alt="даже картинку спиздили" (Егор, сорян за мат)-->
+            <div id="gera">
+                <p>
+                    <label for="malik">Фамилия</label>
+                    <br>
+                    <input type="text" placeholder="Фамилия" id="Fam">
+                </p>
+                <p>
+                    <label for="Name">Имя</label>
+                    <br>
+                    <input type="text" placeholder="Имя" id="Name">
+                </p>
+                <p>
+                    <label for="Email">Почта</label>
+                    <br>
+                    <input type="email" placeholder="Почта" id="Email">
+                </p>
+                <p>
+                    <label for="Tel">Телефон</label>
+                    <br>
+                    <input type="tel" placeholder="Телефон" id="Tel">
+                </p>
+                <p>
+                    <label for="Data">Дата рождения</label>
+                    <br>
+                    <input class="data" type="text" placeholder="дд/мм/гггг" maxlength="11" minlength="9" pattern="^[0-9/]+$" title="введите дату в формате дд/мм/гггг" id="kavo">
+                </p>
+                <p>
+                    <label for="login">Логин</label>
+                    <br>
+                    <input class="login" type="text" placeholder="Логин" id="login" pattern="^[a-zA-Z0-9_]+$" title="используйте только латиницу и цифры">
+                </p>
+                <p>
+                    <label for="pass">Пароль</label>
+                    <br>
+                    <input class="password" type="password" placeholder="Пароль" id="password" pattern="^[a-zA-Z0-9_]+$" title="используйте только латиницу и цифры и специальные символы">
+                </p>
+                <p>
+                    <input type="submit" value="Отправить">
+                </p>
+            </div>
+        </form>
+    </body>
+</html>
